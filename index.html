@@ -1,0 +1,76 @@
+<html>
+    <head>
+    <meta charset="iso-8859-1">
+    <title>T-SYS</title>
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <link href="css/style_front.scss" rel="stylesheet" type="text/css"  media="all" />
+    
+    
+    <!-- Paypal code -- Add meta tags for mobile and IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    </head>
+    <body>
+    <script>
+        // document.getElementById('modal').click();
+        // alert("h")
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // $(document).ready(function(){
+        //     $(function(){
+        //         setTimeout(function(){
+        //             window.location.href = $('.boton').attr('href'); // extrae el href de el boton
+        //         },3000); // 3sg para redirecccionar
+        //     });
+        // });
+    </script>
+        <div class="subform_cont1">
+            <div class="formulario">
+                <div class="ticket_lista">
+                    <div class="lista_header">
+                        <h3 style="font-weight:200; margin:8px 0;">Payment</h3>
+                        <!-- <p style="font-size:9px; margin:0;"><?php //echo $_SESSION['tsys_UserId']; ?></p> -->
+                    </div>
+                    <div class="tickets_view" style="color:#FFF; background-color:#0070ba; background-image: linear-gradient(100deg,#0070ba,#1546a0);">
+                        <div class="paypal">
+                            <p>Order Number:</p>
+                            <h1>0000123</h1>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <h4>Total</h4>
+                            <h3>100 USD</h3>
+                            
+                            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" id="paypal_form" target="_blank">
+                                <input type="hidden" name="upload" value="1" />
+                                <input type="hidden" name="amount" value="100" />
+                                <input type="hidden" name="business" value="sb-yb47yx1617798@business.example.com" />
+                                <input type="hidden" name="receiver_email" value="saler@mailreceiver" />
+                                <input type="hidden" name="cmd" value="_xclick" />
+                                <input type="hidden" name="charset" value="utf-8" />
+                                <input type="hidden" name="currency_code" value="USD" />
+                                <input type="hidden" name="item_name" value="Order number: 0000123" />
+                                <input type="hidden" name="payer_id" value="1" />
+                                <input type="hidden" name="payer_email" value="buyer@mailreceiver>" />
+                                <input type="hidden" name="return" value=" " class="boton"/>
+                                <input type="hidden" name="cancel_return" value="http://www.google.com" />
+                                <input type="hidden" name="rm" value="2" />
+                                <input type="hidden" name="bn" value="PRESTASHOP_WPS" />
+                                <input type="hidden" name="cbt" value="Volver a " />
+                                <input type="image" src="img/paypal_button.png" name="image" style="cursor: pointer; width: 260px;" />
+                            </form>
+    
+                        </div>
+                    </div>
+                    <div class="lista_foot" style="text-align: center;">
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div> 
+    </body>
+    </html>
